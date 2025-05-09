@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1107377633092388325}
   - component: {fileID: 6563487951523401420}
   - component: {fileID: 34433597909469033}
+  - component: {fileID: 2771359570830250087}
   m_Layer: 0
   m_Name: LootCrate
   m_TagString: LootCrate
@@ -109,3 +110,56 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 9.742397, y: 9.59, z: 0.20000002}
   m_Center: {x: 0.043677986, y: 0.00006109476, z: 0}
+--- !u!114 &2771359570830250087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733889041874511235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_Priority: 0
+  m_ComponentVersion: 5
+  m_HasRenderer: 0
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_AlphaCutoff: 0.1
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: -4.915039, y: -4.794922, z: 0}
+  - {x: -4.915039, y: 4.794922, z: 0}
+  - {x: 4.915039, y: 4.794922, z: 0}
+  - {x: 4.915039, y: -4.794922, z: 0}
+  m_ShapePathHash: 0
+  m_InstanceId: 0
+  m_ShadowShape2DComponent: {fileID: 6563487951523401420}
+  m_ShadowShape2DProvider:
+    rid: 6172954260590821563
+  m_ShadowCastingSource: 2
+  m_ShadowMesh:
+    m_Mesh: {fileID: 0}
+    m_LocalBounds:
+      m_Center: {x: 0.10999298, y: 0.01499939, z: 0}
+      m_Extent: {x: 4.6949997, y: 4.6399994, z: 0}
+    m_EdgeProcessing: 1
+    m_TrimEdge: 0.04
+    m_FlipX: 0
+    m_FlipY: 0
+    m_InitialTrim: 0.04
+  m_CastingOption: 1
+  m_PreviousTrimEdge: 0
+  m_PreviousEdgeProcessing: -1
+  m_PreviousShadowCastingSource: -1
+  m_PreviousShadowShape2DSource: {fileID: 0}
+  references:
+    version: 2
+    RefIds:
+    - rid: 6172954260590821563
+      type: {class: ShadowShape2DProvider_SpriteRenderer, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
+      data: 
