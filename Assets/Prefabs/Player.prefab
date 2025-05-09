@@ -304,7 +304,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -324,56 +324,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d92f6c96baa17d14997897954f07d6c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WASD:
-    m_Name: WASD
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: eaaf2b65-a629-4d05-b837-d54f7bd62ae0
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 2D Vector
-      m_Id: 904fd100-d012-4a0e-bb2b-bc34edc87781
-      m_Path: 2DVector
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: WASD
-      m_Flags: 4
-    - m_Name: up
-      m_Id: e1ea4a67-ab99-4be0-bc57-2737f39c135f
-      m_Path: <Keyboard>/w
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: WASD
-      m_Flags: 8
-    - m_Name: down
-      m_Id: 163710df-f027-42e7-9ef6-ebd8315b70a7
-      m_Path: <Keyboard>/s
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: WASD
-      m_Flags: 8
-    - m_Name: left
-      m_Id: f9dba880-9a2d-4a71-a3fd-bedafecdd5be
-      m_Path: <Keyboard>/a
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: WASD
-      m_Flags: 8
-    - m_Name: right
-      m_Id: a5f9334e-8a4e-4aa6-b360-502f13f1e685
-      m_Path: <Keyboard>/d
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: WASD
-      m_Flags: 8
-    m_Flags: 0
-  movementSpeed: 5
+  crateManager: {fileID: 0}
+  acceleration: 8
+  maxSpeed: 12
+  drag: 3
+  tiltAngle: 15
+  tiltSmoothing: 5
+  surfaceY: 5
+  waterDrag: 0.5
+  airDrag: 0
+  bobForce: 4
+  bobRange: 0.6
+  airborneGravityMultiplier: 1.2
 --- !u!1 &6234685689492066145
 GameObject:
   m_ObjectHideFlags: 0
