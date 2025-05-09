@@ -8,10 +8,13 @@ public class PlayerController : MonoBehaviour
     //Components
     Rigidbody myRB;
     Transform myAvatar;
+    Transform myLightLeft;
+    Transform myLightRight;
     //Player movement 
     [SerializeField] InputAction WASD;
     Vector2 movementInput;
     [SerializeField] float movementSpeed;
+    float currentDirection = 1f;
 
     private void OnEnable()
     {
@@ -27,6 +30,8 @@ public class PlayerController : MonoBehaviour
     {
         myRB = GetComponent<Rigidbody>();
         myAvatar = transform.GetChild(0);
+        myLightLeft = transform.GetChild(2);
+        myLightRight = transform.GetChild(3);
     }
 
     void Update()
@@ -34,7 +39,17 @@ public class PlayerController : MonoBehaviour
         movementInput = WASD.ReadValue<Vector2>();
         if(movementInput.x!=0)
         {
-            myAvatar.localScale = new Vector2(Mathf.Sign(movementInput.x), 1);
+            float direction = Mathf.Sign(movementInput.x);
+            myAvatar.localScale = new Vector2(direction, 1);
+
+            if (direction != currentDirection) {
+                currentDirection = direction;
+
+                // Activate/deactivate lights based on direction
+                bool facingRight = direction > 0;
+                myLightRight.gameObject.SetActive(facingRight);
+                myLightLeft.gameObject.SetActive(!facingRight);
+            }
         }
     }
     private void FixedUpdate()
