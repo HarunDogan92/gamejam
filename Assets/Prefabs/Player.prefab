@@ -333,7 +333,7 @@ MonoBehaviour:
   drag: 3
   tiltAngle: 15
   tiltSmoothing: 5
-  surfaceY: 5
+  surfaceY: -321.5
   waterDrag: 0.5
   airDrag: 0
   bobForce: 4
