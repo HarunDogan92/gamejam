@@ -335,6 +335,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7158136585027317669}
     m_Modifications:
+    - target: {fileID: 247872169930791238, guid: a8e992db0cc5d9a49807aa793cec56d0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -562
+      objectReference: {fileID: 0}
+    - target: {fileID: 247872169930791238, guid: a8e992db0cc5d9a49807aa793cec56d0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -121
+      objectReference: {fileID: 0}
+    - target: {fileID: 247872169930791238, guid: a8e992db0cc5d9a49807aa793cec56d0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.0035244254
+      objectReference: {fileID: 0}
+    - target: {fileID: 247872169930791238, guid: a8e992db0cc5d9a49807aa793cec56d0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.9999938
+      objectReference: {fileID: 0}
+    - target: {fileID: 247872169930791238, guid: a8e992db0cc5d9a49807aa793cec56d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -179.039
+      objectReference: {fileID: 0}
+    - target: {fileID: 2773524344674201191, guid: a8e992db0cc5d9a49807aa793cec56d0, type: 3}
+      propertyPath: m_PointLightInnerAngle
+      value: 150.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 2773524344674201191, guid: a8e992db0cc5d9a49807aa793cec56d0, type: 3}
+      propertyPath: m_PointLightOuterAngle
+      value: 150.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 2773524344674201191, guid: a8e992db0cc5d9a49807aa793cec56d0, type: 3}
+      propertyPath: m_PointLightOuterRadius
+      value: 235.08249
+      objectReference: {fileID: 0}
     - target: {fileID: 4366123642376580369, guid: a8e992db0cc5d9a49807aa793cec56d0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
