@@ -1321,6 +1321,7 @@ MonoBehaviour:
   finalButton: {fileID: 3341842387072015257}
   isFinalButtonActive: 0
   skillTree: {fileID: 0}
+  startMenu: {fileID: 0}
 --- !u!1 &2116237433807602750
 GameObject:
   m_ObjectHideFlags: 0
@@ -1945,6 +1946,7 @@ MonoBehaviour:
   finalButton: {fileID: 0}
   isFinalButtonActive: 0
   skillTree: {fileID: 0}
+  startMenu: {fileID: 0}
 --- !u!1 &2710129807881648494
 GameObject:
   m_ObjectHideFlags: 0
@@ -2228,6 +2230,7 @@ MonoBehaviour:
   finalButton: {fileID: 0}
   isFinalButtonActive: 0
   skillTree: {fileID: 0}
+  startMenu: {fileID: 0}
 --- !u!1 &3470677287519125499
 GameObject:
   m_ObjectHideFlags: 0
@@ -2617,6 +2620,7 @@ MonoBehaviour:
   finalButton: {fileID: 0}
   isFinalButtonActive: 0
   skillTree: {fileID: 0}
+  startMenu: {fileID: 0}
 --- !u!1 &4185848828259831722
 GameObject:
   m_ObjectHideFlags: 0
@@ -2975,6 +2979,7 @@ MonoBehaviour:
   finalButton: {fileID: 3341842387072015257}
   isFinalButtonActive: 0
   skillTree: {fileID: 0}
+  startMenu: {fileID: 0}
 --- !u!1 &5025879394544401335
 GameObject:
   m_ObjectHideFlags: 0
@@ -3792,7 +3797,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: To unlock 10 crates
+  m_text: To unlock 10000$
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4010,6 +4015,7 @@ MonoBehaviour:
   finalButton: {fileID: 0}
   isFinalButtonActive: 0
   skillTree: {fileID: 0}
+  startMenu: {fileID: 0}
 --- !u!1 &6716456257773964731
 GameObject:
   m_ObjectHideFlags: 0
@@ -4157,6 +4163,7 @@ MonoBehaviour:
   finalButton: {fileID: 3341842387072015257}
   isFinalButtonActive: 0
   skillTree: {fileID: 0}
+  startMenu: {fileID: 0}
 --- !u!1 &6990336525471003000
 GameObject:
   m_ObjectHideFlags: 0
@@ -4660,6 +4667,7 @@ MonoBehaviour:
   finalButton: {fileID: 0}
   isFinalButtonActive: 0
   skillTree: {fileID: 0}
+  startMenu: {fileID: 0}
 --- !u!1 &7987211396191348544
 GameObject:
   m_ObjectHideFlags: 0
@@ -5230,6 +5238,7 @@ MonoBehaviour:
   finalButton: {fileID: 0}
   isFinalButtonActive: 0
   skillTree: {fileID: 0}
+  startMenu: {fileID: 0}
 --- !u!1 &8958762596537894875
 GameObject:
   m_ObjectHideFlags: 0
