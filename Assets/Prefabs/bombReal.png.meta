@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 512938ce2d135d54d97e5b5c115de257
+guid: 7cf3364633c78e2448bc29cf6e32ea9c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7754988575891523622
-    second: timer_0
+      213: -569457334686930788
+    second: bombReal_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: timer_0
+      name: bombReal_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1022
-        height: 109
+        x: 71
+        y: 67
+        width: 683
+        height: 691
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ad7f5c85afeb06490800000000000000
-      internalID: -7754988575891523622
+      spriteID: c98ae3b3291e818f0800000000000000
+      internalID: -569457334686930788
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      timer_0: -7754988575891523622
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
