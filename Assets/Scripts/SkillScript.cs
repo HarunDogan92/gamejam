@@ -15,7 +15,7 @@ public class SkillScript : MonoBehaviour
 
     public bool isFinalButton = false;
     public Button finalButton;
-    public bool isFinalButtonActive;
+    public int isFinalButtonActive;
 
 
     void Start()
@@ -48,7 +48,7 @@ public class SkillScript : MonoBehaviour
         
         if(finalButton){
             finalButton.gameObject.SetActive(true);
-            isFinalButtonActive = true;
+            isFinalButtonActive++;
         }
     }
 }
