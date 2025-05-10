@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 public class TimeController : MonoBehaviour
 {
     public Image timerImage;
-    public float maxTime = 5.0f;
-    float timeRemaining;
+    public float maxTime = 60.0f;
+    public float timeRemaining;
     public GameObject gameOver;
     public GameObject tryAgainButton;
     public GameObject player;

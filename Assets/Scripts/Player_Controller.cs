@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     private Transform myLightLeft;
     private Transform myLightRight;
     public CrateManager crateManager;
+    public TimeController timeController;
 
     [Header("Effects")]
     [SerializeField] private ParticleSystem waterTrailLeft;
@@ -122,7 +123,7 @@ public class PlayerController : MonoBehaviour
         {
             myRB.linearDamping = airDrag;
             myRB.AddForce(Physics.gravity * airborneGravityMultiplier, ForceMode.Acceleration);
-
+            timeController.timeRemaining = timeController.maxTime;
             if (!wasInAirLastFrame)
                 movementInput = Vector2.zero;
         }

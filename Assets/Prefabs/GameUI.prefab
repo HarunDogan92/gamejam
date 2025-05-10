@@ -1028,9 +1028,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerImage: {fileID: 6151766877526382742}
-  maxTime: 5
+  maxTime: 60
   gameOver: {fileID: 1537148583567127516}
   tryAgainButton: {fileID: 5019180352385738656}
+  player: {fileID: 0}
 --- !u!1 &7941401920265180327
 GameObject:
   m_ObjectHideFlags: 0
