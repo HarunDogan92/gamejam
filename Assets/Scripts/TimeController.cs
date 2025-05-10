@@ -10,6 +10,7 @@ public class TimeController : MonoBehaviour
     public GameObject gameOver;
     public GameObject tryAgainButton;
     public GameObject player;
+    public GameObject camera;
     
 
     void Start() {
@@ -29,6 +30,7 @@ public class TimeController : MonoBehaviour
         gameOver.SetActive(true);
         tryAgainButton.SetActive(true);
         player.SetActive(false);
+        camera.SetActive(true);
     }
 
     public void tryAgain() {

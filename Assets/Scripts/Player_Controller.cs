@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private ParticleSystem waterTrailLeft;
 
     // Input
-    private InputAction movementAction;
+    public InputAction movementAction;
     private Vector2 movementInput;
     private Vector3 targetVelocity;
 
