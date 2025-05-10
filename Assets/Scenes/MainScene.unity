@@ -1329,10 +1329,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game
       objectReference: {fileID: 0}
-    - target: {fileID: 9019092387298679118, guid: 507745ad8b552284886acfc1dd203596, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9142956633084070812, guid: 507745ad8b552284886acfc1dd203596, type: 3}
       propertyPath: m_ShadowMesh.m_Mesh
       value: 
