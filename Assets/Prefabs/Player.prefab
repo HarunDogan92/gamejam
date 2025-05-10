@@ -166,7 +166,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 6446078609603626373}
   m_Father: {fileID: 8404913944929223793}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!212 &1473736585535770859
@@ -259,7 +260,6 @@ Transform:
   - {fileID: 1850607129729807574}
   - {fileID: 2193457976140683440}
   - {fileID: 8800005596683520480}
-  - {fileID: 6446078609603626373}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!54 &6703378376368402071
@@ -325,6 +325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crateManager: {fileID: 0}
+  waterTrailLeft: {fileID: 0}
   acceleration: 8
   maxSpeed: 12
   drag: 3
@@ -445,12 +446,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6809395990284738037}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: -0.99, y: -4.09, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: -0.7071068}
+  m_LocalPosition: {x: 10, y: 1000, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8404913944929223793}
+  m_Father: {fileID: 1850607129729807574}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!114 &1718279038331269397
 MonoBehaviour:

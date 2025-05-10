@@ -13,6 +13,9 @@ public class PlayerController : MonoBehaviour
     private Transform myLightRight;
     public CrateManager crateManager;
 
+    [Header("Effects")]
+    [SerializeField] private ParticleSystem waterTrailLeft;
+
     // Input
     private InputAction movementAction;
     private Vector2 movementInput;
@@ -30,7 +33,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float tiltAngle = 15f;
     [SerializeField] float tiltSmoothing = 5f;
 
-    // water surface:
     [Header("Water Surface Settings")]
     [SerializeField] float surfaceY = 5f;
     [SerializeField] float waterDrag = 0.5f;
@@ -42,7 +44,7 @@ public class PlayerController : MonoBehaviour
     private bool isInAir = false;
     private bool wasInAirLastFrame = false;
     private float currentDirection = 1f;
-    // water surface END
+
     private void OnEnable()
     {
         SetupInput();
@@ -57,22 +59,22 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         myRB = GetComponent<Rigidbody>();
-        myAvatar = transform.GetChild(0);
-        myLightLeft = transform.GetChild(2);
-        myLightRight = transform.GetChild(3);
+        myAvatar = transform.Find("Sprite");
+        myLightLeft = myAvatar.Find("Light Left");
+        //myLightRight = myAvatar.Find("Light Right");
         myRB.linearDamping = drag;
+
+        if (waterTrailLeft != null)
+        {
+            waterTrailLeft.Stop();
+        }
     }
 
-        void ToggleLights()
+    void ToggleLights()
     {
-        // Toggle the light state (on/off)
         areLightsOn = !areLightsOn;
-       
-        // Enable or disable the lights based on the state
-        //myLightLeft.gameObject.SetActive(areLightsOn);
         myLightRight.gameObject.SetActive(areLightsOn);
     }
-
 
     void Update()
     {
@@ -82,33 +84,37 @@ public class PlayerController : MonoBehaviour
             movementInput = Vector2.zero;
 
         if (movementInput.x > 0.1f)
-        {
             currentDirection = 1f;
+
+        // Rear-left water trail logic
+        bool isMoving = movementInput.magnitude > 0.1f;
+        if (!isInAir && isMoving)
+        {
+            if (!waterTrailLeft.isPlaying)
+                waterTrailLeft.Play();
+        }
+        else
+        {
+            if (waterTrailLeft.isPlaying)
+                waterTrailLeft.Stop();
         }
 
-        // Handle the Toggle Lights action
         if (toggleLightsAction.triggered)
-        {
             ToggleLights();
-        }
 
         ApplyTilt(movementInput);
     }
-
-
     void FixedUpdate()
     {
         Vector3 inputDir = new Vector3(movementInput.x, movementInput.y, 0f).normalized;
         float speedMultiplier = movementInput.x < 0f ? 0.3f : 1f;
         targetVelocity = inputDir * maxSpeed * speedMultiplier;
 
-        // Apply movement only underwater
         if (!isInAir)
         {
             myRB.linearVelocity = Vector3.MoveTowards(myRB.linearVelocity, targetVelocity, acceleration * Time.fixedDeltaTime);
         }
 
-        // Track airborne state transitions
         wasInAirLastFrame = isInAir;
         isInAir = transform.position.y > surfaceY;
 
@@ -147,11 +153,8 @@ public class PlayerController : MonoBehaviour
         Quaternion finalRotation = Quaternion.Slerp(myAvatar.localRotation, baseRotation * tiltRotation, Time.deltaTime * tiltSmoothing);
 
         myAvatar.localRotation = finalRotation;
-
-        Quaternion lightOffset = Quaternion.Euler(0f, 0f, 270f);
-        myLightLeft.localRotation = finalRotation * lightOffset;
-        myLightRight.localRotation = finalRotation * lightOffset;
     }
+
 
     private void SetupInput()
     {
@@ -166,15 +169,16 @@ public class PlayerController : MonoBehaviour
         movementAction.AddBinding("<Gamepad>/leftStick");
 
         toggleLightsAction = new InputAction("ToggleLights", InputActionType.Button);
-        toggleLightsAction.AddBinding("<Keyboard>/h");  // Use 'F' for keyboard
-        toggleLightsAction.AddBinding("<Gamepad>/buttonSouth");  // 'A' button on gamepad
+        toggleLightsAction.AddBinding("<Keyboard>/h");
+        toggleLightsAction.AddBinding("<Gamepad>/buttonSouth");
 
-        toggleLightsAction.Enable(); // Enable the toggle action
+        toggleLightsAction.Enable();
     }
 
-    void OnTriggerEnter(Collider other) {
-        Debug.Log("here");
-        if (other.gameObject.CompareTag("LootCrate")) {
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("LootCrate"))
+        {
             Destroy(other.gameObject);
             crateManager.crateCount++;
         }
