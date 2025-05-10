@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class BoatPatrol : MonoBehaviour
 {
-    [SerializeField] private float patrolSpeed = 2f;
-    [SerializeField] private float patrolRange = 5f;
+    [SerializeField] private float patrolSpeed = 10f;
+    [SerializeField] private float patrolRange = 500f;
 
     [Header("Bomb Drop Settings")]
     [SerializeField] private GameObject bombPrefab;
-    [SerializeField] private float dropInterval = 2f;
+    [SerializeField] private float dropInterval = 1f;
     [SerializeField] private Transform dropPoint;
 
     private Vector3 startPos;

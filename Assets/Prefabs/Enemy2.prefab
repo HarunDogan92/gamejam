@@ -120,10 +120,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71157bb9e2c97654a8e8a4de05835f9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrolSpeed: 15
-  patrolRange: 40
+  patrolSpeed: 10
+  patrolRange: 500
   bombPrefab: {fileID: 6158128440603839526, guid: 543cdbc98d2b98a4fa67832c8b56939a, type: 3}
-  dropInterval: 2
+  dropInterval: 1
   dropPoint: {fileID: 3036994010161532337}
 --- !u!1 &6705650357918429442
 GameObject:

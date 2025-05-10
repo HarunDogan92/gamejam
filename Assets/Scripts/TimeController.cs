@@ -21,10 +21,14 @@ public class TimeController : MonoBehaviour
             timeRemaining -= Time.deltaTime;
             timerImage.fillAmount = timeRemaining / maxTime;
         } else {
-            gameOver.SetActive(true);
-            tryAgainButton.SetActive(true);
-            player.SetActive(false);
+            GameOver();
         }
+    }
+
+    public void GameOver() {
+        gameOver.SetActive(true);
+        tryAgainButton.SetActive(true);
+        player.SetActive(false);
     }
 
     public void tryAgain() {

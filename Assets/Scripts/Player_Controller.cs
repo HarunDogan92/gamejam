@@ -183,5 +183,8 @@ public class PlayerController : MonoBehaviour
             Destroy(other.gameObject);
             crateManager.crateCount++;
         }
+        if (other.gameObject.CompareTag("Bomb")) {
+            timeController.GameOver();
+        }
     }
 }
