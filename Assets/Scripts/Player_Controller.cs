@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float tiltSmoothing = 5f;
 
     [Header("Water Surface Settings")]
-    [SerializeField] float surfaceY = 5f;
+    [SerializeField] float surfaceY = 293f;
     [SerializeField] float waterDrag = 0.5f;
     [SerializeField] float airDrag = 0f;
     [SerializeField] float bobForce = 4f;
