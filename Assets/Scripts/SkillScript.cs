@@ -2,6 +2,7 @@ using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SkillScript : MonoBehaviour
 {
@@ -16,6 +17,9 @@ public class SkillScript : MonoBehaviour
     public bool isFinalButton = false;
     public Button finalButton;
     public int isFinalButtonActive;
+
+    public GameObject skillTree;
+    public GameObject startMenu;
 
 
     void Start()
@@ -50,5 +54,11 @@ public class SkillScript : MonoBehaviour
             finalButton.gameObject.SetActive(true);
             isFinalButtonActive++;
         }
+    }
+
+    public void backToGame() {
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+        skillTree.SetActive(false);
+        startMenu.SetActive(false);
     }
 }

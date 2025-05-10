@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class SellZoneTrigger : MonoBehaviour
 {
+
+    public GameObject skillTree;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))  // Check if the object entering is the player
@@ -11,6 +14,7 @@ public class SellZoneTrigger : MonoBehaviour
             if (crateManager != null)
             {
                 crateManager.SellCrates();  // Sell crates when player enters the zone
+                skillTree.SetActive(true);
             }
         }
     }
