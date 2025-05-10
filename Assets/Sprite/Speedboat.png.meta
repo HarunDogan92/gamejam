@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Speedboat_0: 7536316174692301108
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
